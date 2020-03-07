@@ -10,22 +10,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="row">
-        <h1 class="col d2">JavaScript Quiz</h1>
-        <div class="col" id="timer"></div>
-    </header>
+    <div id="container">
 
-    <section class="card" id="quiz-container">
-        <div id="quiz"></div>
-        <div id="score"></div>
-    </section> 
+        <div id="header">
+            <h1>JavaScript Quiz</h1>
+            <div id="timer">0:00</div>
+        </div>
 
-    <section id="buttons-container">
-        <button id="start">Start Quiz</button>
-        <button id="next">Next</button>
-        </br>
-        <button id="finish">Finish</button>
-    </section>
+        <div id="instructions">
+            <p>Instructions:</p>
+            <ol>
+                <li>Press the start button to begin the quiz before the timer above runs out.</li>
+                <li>You will be given 10 multiple choice questions to answer. Choose the right answer and your score goes up by 1. Choose the wrong answer and 30 seconds is subtracted from your time.</li>
+                <li>You will have 5 minutes to answer all 10 questions. When the the timer runs out, your final score will automatically by calculated even if you have other questions left.</li>
+            </ol>
+            <p>Good luck!</p>
+        </div>
+
+        <div id="start">Start!</div>
+
+        <div id="quizDiv" style="display: none">
+            <div id="number"></div>
+            <div id="question"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+        </div>
+        
+        <div id="scoreboard" style="display: none">
+            <div id="finalScore"></div>
+            <form>
+                <input type="text" name="username" id="username" placeholder="Your Name">
+                <button class="button" id="saveScore">Save</button>
+            </form>
+            <table id="highScoresTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+        </div>
+    </div> 
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>

@@ -48,11 +48,13 @@ The steps that went into creating each of these parts were challenging to comple
             * set localStorage to save high scores
                 * added script to sort and splice scores to scoreboard   
 * tested application for functionality and responsiveness
-<!-- ### v2.0
+### v2.0
 * added instructions
 * added more questions
+* changed time limit for quiz
 * created style.css
-    * added styling for better visual appeal and design -->
+    * added styling for better visual appeal and design 
+* added JS logo
 
 ## Framework
 
@@ -62,5 +64,7 @@ Created with Bootstrap
 * Sitepoint for some basic resources on making a simple JS quiz [here](https://www.sitepoint.com/simple-javascript-quiz/)
 * Code Explained for a decent breakdown of how to create a multiple choize quiz and render questions and answers. The blog post can be found [here](https://www.codeexplained.org/2018/10/create-multiple-choice-quiz-using-javascript.html), the Youtube video [here](https://youtu.be/49pYIMygIcU), and the GitHub repository [here](https://github.com/CodeExplainedRepo/Multiple-Choice-Quiz-JavaScript).
 * James Quick for help with the scoreboard and local storage scripts. His Youtube series on a similar project can be found [here](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx), and his Github repository can be found [here](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript).
+* Wikimedia Commons for the free JS logo [here](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png)
+* Google Fonts for the font [here](https://fonts.googleapis.com/css?family=Oxanium&display=swap)
 * [w3schools.com](https://www.w3schools.com/) for all their resources regarding HTML, CSS and JS
 * Special thanks to my instructor Nick and my awesome TAs Jimi and Chris for answering all my questions and teaching me the skills I need to get this done!

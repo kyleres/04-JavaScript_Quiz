@@ -86,7 +86,7 @@ let questionList = [
         correctAnswer: "C",
     },
     {
-        question: ("Sample code: </br><i>var car = Honda</br>var Car = Mercedes</i></br> What does console.log(car) display?"),
+        question: ("Sample code: </br><i>var car = Honda</br>var Car = Mercedes</i></br> What does <i>console.log(car)</i> display?"),
         A: "A: HondaMercedes",
         B: "B: MercedesHonda",
         C: "C: Honda",
@@ -134,7 +134,7 @@ let score = 0;
 
 //Start Quiz Function
 function startQuiz() {
-    totalTime = 5 * 60 * 1000;
+    totalTime = 4 * 60 * 1000;
     score = 0;
     start.style.display = "none";
     instructions.style.display = "none";
@@ -183,7 +183,6 @@ let finalScore = document.getElementById("finalScore");
 let highScoresTable = document.getElementById("highScoresTable");
 let finalScoreValue = localStorage.getItem("finalScoreValue");
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-let maxHighScores = 5;
 
 //Render Score Function
 function renderScore() {
@@ -215,13 +214,15 @@ function renderScore() {
         // save highscores to local storage as string
         localStorage.setItem("highScores", JSON.stringify(highScores));
     });
-    // for displaying highscores in scoreboard 
-    highScoresTable.innerHTML += highScores
-        .map(score => {
+
+    // Scoreboard Display
+    highScoresTable.innerHTML += highScores.map(
+        score => {
             return `
                 <tr>
                     <td>${score.name}</td>
                     <td>${score.score}</td>
                 </tr>`
-        });
+        }
+    );
 };

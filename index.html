@@ -7,51 +7,57 @@
     <title>JS Code Quiz</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
+    <div id="display">
 
-        <div id="header">
-            <h1>JavaScript Quiz</h1>
-            <div id="timer">0:00</div>
+        <div id="header" class="row">
+            <span>
+                <img id="logo" class="col" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png" alt="JavaScript logo"/>
+            </span>
+            <h1 id="title" class="col-8 text-center display-4 pt-2">JavaScript Code Quiz</h1>
+            <div id="timer" class="col text-center h1 mt-2 pt-3 bg-info">0:00</div>
         </div>
 
-        <div id="instructions">
-            <p>Instructions:</p>
-            <ol>
-                <li>Press the start button to begin the quiz before the timer above runs out.</li>
-                <li>You will be given 10 multiple choice questions to answer. Choose the right answer and your score goes up by 1. Choose the wrong answer and 30 seconds is subtracted from your time.</li>
-                <li>You will have 5 minutes to answer all 10 questions. When the the timer runs out, your final score will automatically by calculated even if you have other questions left.</li>
-            </ol>
-            <p>Good luck!</p>
-        </div>
-
-        <div id="start">Start!</div>
-
-        <div id="quizDiv" style="display: none">
-            <div id="number"></div>
-            <div id="question"></div>
-            <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+        <div id="container" class="container">
+            <div id="instructions" class="card mt-3 p-3">
+                <p>Instructions:</p>
+                <ol>
+                    <li>Press the start button to begin the quiz before the timer above runs out.</li>
+                    <li>You will be given 10 multiple choice questions to answer. Choose the right answer and your score goes up by 1. Choose the wrong answer and 30 seconds is subtracted from your time.</li>
+                    <li>You will have 4 minutes to answer all 10 questions. When the the timer runs out, your final score will automatically by calculated even if you have other questions left.</li>
+                </ol>
+                <p>Good luck!</p>
             </div>
-        </div>
-        
-        <div id="scoreboard" style="display: none">
-            <div id="finalScore"></div>
-            <form>
-                <input type="text" name="username" id="username" placeholder="Your Name">
-                <button class="button" id="saveScore">Save</button>
-            </form>
-            <table id="highScoresTable">
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-            </table>
+    
+            <div id="start" class="card my-3 p-3 text-center text-light">Start!</div>
+    
+            <div id="quizDiv" class="card my-3 p-3" style="display: none">
+                <div id="number"></div>
+                <div id="question" class="mb-3 border-bottom"></div>
+                <div id="choices">
+                    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+                </div>
+            </div>
+            
+            <div id="scoreboard" class="card my-3 p-3" style="display: none">
+                <div id="finalScore" class="pb-2 border-bottom"></div>
+                <form class="text-center my-3">
+                    <input type="text" name="username" id="username" class="text-center" placeholder="Your Name">
+                    <button class="button" id="saveScore">Save</button>
+                </form>
+                <table id="highScoresTable" class="table text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div> 
 
